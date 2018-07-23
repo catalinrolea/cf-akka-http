@@ -1,0 +1,7 @@
+---
+applications:
+- name: java-main-application
+  instances: 1
+  memory: 768M
+  path: target/scala-2.12/TestProject-assembly-0.1-SNAPSHOT.jar
+  buildpack: java_buildpack_offline      

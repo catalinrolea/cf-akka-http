@@ -1,0 +1,23 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+    mavenLocal()
+}
+
+dependencies {
+    compile 'com.typesafe.akka:akka-http_2.12:10.0.11'
+    compile 'com.typesafe.akka:akka-http-jackson_2.12:10.0.11'
+    compile 'com.typesafe.akka:akka-stream_2.12:2.5.11s'
+	compile 'com.typesafe' %% 'ssl-config-akka' % '0.2.2'
+    
+    testCompile 'junit:junit:4.12'
+}
+
+mainClassName = "com.lightbend.akka.http.sample.QuickstartServer"
+
+run {
+    standardInput = System.in
+}
